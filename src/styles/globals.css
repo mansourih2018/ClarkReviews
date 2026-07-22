@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg:            #FDF8F0;   /* cream — page background */
+  --color-surface:       #FFFFFF;   /* white — cards, nav */
+  --color-accent:        #C4622D;   /* terracotta — primary CTA */
+  --color-accent-hover:  #A84F24;   /* terracotta dark — hover */
+  --color-text-primary:  #2C1810;   /* dark brown — headings, body */
+  --color-text-muted:    #6B4C3B;   /* medium brown — captions, meta */
+  --color-border:        #E8D5C4;   /* warm beige — borders, dividers */
+  --color-pro:           #4A7C3F;   /* muted green — pros */
+  --color-con:           #B94040;   /* muted red — cons */
+  --color-rating:        #D4842A;   /* amber — stars */
+  --font-sans: "Inter", system-ui, sans-serif;
+}

@@ -1,0 +1,77 @@
+---
+# ============================================================
+# Clark Reviews — MDX Review Template
+# ============================================================
+# Copy this file and rename to [slug].mdx for each new review.
+# Fill in every field — do not leave any as placeholder values.
+# See GEMINI.md Section 6 for full schema documentation.
+#
+# IMPORTANT: The MDX body contains ONLY prose (Introduction +
+# additional sections). All structured components (QuickVerdict,
+# RatingBreakdown, ProsCons, BestFor, ComparisonTable, Verdict,
+# FAQ) are rendered by src/app/reviews/[slug]/page.tsx directly
+# from frontmatter data — never written into the MDX body.
+# ============================================================
+
+title: "PRODUCT NAME Review: HOOK PHRASE (2026)"
+slug: keyword-based-slug
+date: 2026-01-01
+updatedDate: 2026-01-01
+category: air-fryers # storage | organization | cleaning | air-fryers
+excerpt: "Under 155 chars. Includes target keyword. Benefit statement."
+targetKeyword: "exact keyword from keywords.csv"
+secondaryKeywords:
+  - "secondary keyword one"
+  - "secondary keyword two"
+ogImage: "/images/og/keyword-based-slug.webp"
+product:
+  name: "Full Product Name"
+  image: "/images/products/keyword-based-slug.webp"
+  amazonUrl: "PASTE-SITESTRIPE-LINK-HERE"
+  cjUrl: ""
+rating:
+  valueForMoney: 0.0
+  buildQuality: 0.0
+  performance: 0.0
+  easeOfUse: 0.0
+  design: 0.0
+  overall: 0.0 # overall = average of 5 criteria, rounded to 1 decimal
+pros:
+  - "Specific, sourced pro — cite spec or buyer data"
+  - "Another specific pro"
+cons:
+  - "Specific, sourced con — minimum 2 required"
+  - "Another specific con"
+bestFor:
+  - "Specific use case or persona"
+wrongFor:
+  - "Who should not buy this — minimum 1 required"
+compareProducts:
+  - name: "Alternative Product One"
+    slug: alternative-one-review
+  - name: "Alternative Product Two"
+    slug: alternative-two-review
+verdict: "Buy" # Buy | Skip | Wait for Sale
+faq:
+  - question: "Is the PRODUCT NAME worth buying in 2026?"
+    answer: "Research-based answer addressing the main buying concern, citing specs or verified buyer data."
+  - question: "What is the PRODUCT NAME best used for?"
+    answer: "Research-based answer describing the primary use case and who benefits most."
+  - question: "How does the PRODUCT NAME compare to alternatives?"
+    answer: "Research-based answer comparing key specs against 1–2 named competitors."
+  - question: "How easy is the PRODUCT NAME to clean and maintain?"
+    answer: "Research-based answer covering maintenance requirements, citing the product manual or buyer reports."
+featured: true
+---
+
+## Introduction
+
+Write 2–3 paragraphs here. Open with the problem this product solves.
+Use research-based framing only — cite specs, manufacturer claims,
+and verified buyer data. Target keyword must appear in the first 100 words.
+
+## Additional Sections
+
+Add further prose sections as needed — comparison analysis, who should
+buy or skip, detailed feature discussion. Use ## H2 headings for each
+section. Place internal and external links naturally throughout.

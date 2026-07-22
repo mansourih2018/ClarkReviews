@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": "bissell-little-green-review",
+      "name": "BISSELL Little Green Mini Portable Carpet and Upholstery Deep Cleaner 4075",
+      "slug": "bissell-little-green-review",
+      "category": "cleaning",
+      "image": "/images/products/bissell-little-green-review.webp",
+      "amazonUrl": "https://amzn.to/4wtBGsX",
+      "cjUrl": "",
+      "featured": true,
+      "featuredOrder": 1
+    },
+    {
+      "id": "o-cedar-mop-review",
+      "name": "O-Cedar EasyWring Microfiber Spin Mop, Bucket Floor Cleaning System",
+      "slug": "o-cedar-mop-review",
+      "category": "cleaning",
+      "image": "/images/products/o-cedar-mop-review.webp",
+      "amazonUrl": "https://amzn.to/4bCCX91",
+      "cjUrl": "",
+      "featured": true,
+      "featuredOrder": 2
+    },
+    {
+      "id": "shark-vacmop-review",
+      "name": "Shark VACMOP Cordless Hard Floor Vacuum Mop VM252",
+      "slug": "shark-vacmop-review",
+      "category": "cleaning",
+      "image": "/images/products/shark-vacmop-review.webp",
+      "amazonUrl": "https://amzn.to/4hdmgVh",
+      "cjUrl": "",
+      "featured": true,
+      "featuredOrder": 3
+    },
+    {
+      "id": "shoe-storage-cabinet",
+      "name": "BORNOON Shoe Cabinet with 3 Flip Drawers",
+      "slug": "shoe-storage-cabinet",
+      "category": "storage",
+      "image": "/images/products/shoe-storage-cabinet.webp",
+      "amazonUrl": "https://amzn.to/4yuPGVi",
+      "cjUrl": "",
+      "featured": true,
+      "featuredOrder": 4
+    }
+  ]
+}

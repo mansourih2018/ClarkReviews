@@ -1,0 +1,79 @@
+keyword,monthly_volume,difficulty,intent,category,used,notes
+"ninja af101 air fryer review",1200,35,commercial,air-fryers,false,strong-commercial — single product review
+"cosori air fryer review",2400,45,commercial,air-fryers,false,strong-commercial — single product review
+"instant vortex air fryer review",1600,38,commercial,air-fryers,false,strong-commercial — single product review
+"philips air fryer review",1900,40,commercial,air-fryers,false,strong-commercial — single product review
+"ninja foodi dual basket air fryer review",900,32,commercial,air-fryers,false,strong-commercial — single product review
+"power xl air fryer review",800,30,commercial,air-fryers,false,strong-commercial — single product review
+"gourmia air fryer review",700,28,commercial,air-fryers,false,strong-commercial — single product review
+"chefman air fryer review",600,25,commercial,air-fryers,false,strong-commercial — single product review
+"best air fryer under 100",8900,62,commercial,air-fryers,false,roundup; high-competition — Wirecutter and Good Housekeeping dominate; avoid until site has authority
+"best air fryer for small kitchen",1800,42,commercial,air-fryers,false,roundup — covers multiple products; not a single-product review
+"best air fryer for family of 4",1400,35,commercial,air-fryers,false,roundup — covers multiple products
+"best dual basket air fryer",2800,55,commercial,air-fryers,false,roundup; high-competition — major publications rank here
+"best large capacity air fryer",2100,52,commercial,air-fryers,false,roundup — covers multiple products
+"best air fryer toaster oven combo",3500,58,commercial,air-fryers,false,roundup — covers multiple products
+"best air fryer 2026",14000,78,commercial,air-fryers,false,roundup; high-competition — highest volume but dominated by major sites; long-term target only
+"cosori vs ninja air fryer",1100,38,commercial,air-fryers,false,comparison-post — requires reviews of both products to exist first
+"air fryer vs convection oven",3200,48,informational,air-fryers,false,low-conversion — informational; no direct affiliate angle; use as FAQ content only
+"how to clean an air fryer",6500,40,informational,air-fryers,false,low-conversion — informational; use on category page or FAQ; not a standalone review
+"is an air fryer worth it",4200,52,informational,air-fryers,false,low-conversion — informational; best used as FAQ content within a review
+"air fryer basket vs tray",1300,30,informational,air-fryers,false,low-conversion — informational; use as FAQ content only
+"best under bed storage containers",2400,28,commercial,storage,false,roundup — covers multiple products
+"best stackable storage bins",1800,32,commercial,storage,false,roundup — covers multiple products
+"best storage bins for pantry",1600,35,commercial,storage,false,roundup — covers multiple products
+"best garage storage bins",2200,40,commercial,storage,false,roundup — covers multiple products
+"best closet storage bins",900,28,commercial,storage,false,roundup — covers multiple products
+"best food storage containers",4200,62,commercial,storage,false,roundup; high-competition — Wirecutter and NYT Wirecutter dominate; long-term target only
+"best vacuum storage bags",1900,32,commercial,storage,false,roundup — covers multiple products
+"best storage ottoman review",1400,38,commercial,storage,false,strong-commercial — single product review
+"clear storage bins with lids review",1200,25,commercial,storage,false,strong-commercial — can target a specific brand or a tight roundup of 2–3 products
+"iris usa storage bins review",600,22,commercial,storage,false,strong-commercial — single brand review
+"sterilite storage bins review",900,28,commercial,storage,false,strong-commercial — single brand review
+"rubbermaid storage containers review",1300,35,commercial,storage,false,strong-commercial — single brand review
+"under sink storage organizer review",1100,30,commercial,storage,false,strong-commercial — single product review
+"over door storage organizer review",800,24,commercial,storage,false,strong-commercial — single product review
+"best storage containers for moving",1500,30,commercial,storage,false,roundup; seasonal — traffic peaks March–August (moving season)
+"how to organize a pantry with bins",5200,38,informational,storage,false,low-conversion — informational; use on storage category page; not a standalone review
+"what size storage bins fit under a bed",1800,22,informational,storage,false,low-conversion — informational; use as FAQ content within a storage review
+"shoe storage cabinet",22200,41,commercial,storage,true,strong-commercial — single product review; Semrush-verified data (unlike most rows in this file, which are estimated); high volume opportunity, difficulty in line with previously successful picks like cosori/philips air fryer reviews
+"shoe cabinet entryway",8100,31,commercial,storage,false,long-tail variant of shoe storage cabinet — Semrush-verified, use in FAQ or secondary keywords
+"entryway shoe cabinet",6600,28,commercial,storage,false,long-tail variant of shoe storage cabinet — Semrush-verified, use in FAQ or secondary keywords
+"best drawer organizers for kitchen",2800,38,commercial,organization,false,roundup — covers multiple products
+"best pantry organizers",3400,52,commercial,organization,false,roundup; high-competition — major lifestyle publications dominate
+"best refrigerator organizer bins",1600,32,commercial,organization,false,roundup — covers multiple products
+"best desk organizer",2400,45,commercial,organization,false,roundup — covers multiple products
+"best closet organizer system",3800,58,commercial,organization,false,roundup; high-competition — dominated by major home publications
+"best bathroom organizer",2100,42,commercial,organization,false,roundup — covers multiple products
+"lazy susan organizer review",900,25,commercial,organization,false,strong-commercial — single product review
+"spice rack organizer review",1100,28,commercial,organization,false,strong-commercial — single product review
+"acrylic organizer review",700,22,commercial,organization,false,strong-commercial — can target a specific brand
+"bamboo drawer organizer review",600,20,commercial,organization,false,strong-commercial — single product review
+"lid organizer for pots and pans review",800,22,commercial,organization,false,strong-commercial — single product review
+"linus drawer organizer review",500,18,commercial,organization,false,strong-commercial — single product review; lowest difficulty in category
+"best mail organizer for counter",900,25,commercial,organization,false,roundup — covers multiple products
+"best junk drawer organizer",1200,28,commercial,organization,false,roundup — covers multiple products
+"best kitchen cabinet organizer",2600,48,commercial,organization,false,roundup; high-competition — major home publications dominate
+"how to organize kitchen cabinets",9800,55,informational,organization,false,low-conversion — informational; high traffic but no direct affiliate angle; use on organisation category page only
+"how to declutter your home fast",7200,48,informational,organization,false,low-conversion — informational; no affiliate angle; do not target
+"pantry organization ideas",12000,65,informational,organization,false,low-conversion — informational; high traffic but no direct affiliate angle; use on category page only
+"bissell little green review",2800,35,commercial,cleaning,true,strong-commercial — single product review; good entry point for cleaning category
+"swiffer wet jet review",3200,48,commercial,cleaning,false,strong-commercial — single product review
+"o cedar mop review",1600,30,commercial,cleaning,true,strong-commercial — single product review
+"shark vacmop review",1200,32,commercial,cleaning,true,strong-commercial — single product review
+"scrub daddy sponge review",1800,28,commercial,cleaning,false,strong-commercial — single product review; low difficulty entry point
+"tineco floor washer review",1500,38,commercial,cleaning,false,strong-commercial — single product review
+"black decker dustbuster review",900,28,commercial,cleaning,false,strong-commercial — single product review
+"best steam mop 2026",2100,52,commercial,cleaning,false,roundup — covers multiple products
+"best spin mop",2400,45,commercial,cleaning,false,roundup — covers multiple products
+"best microfiber mop",1400,35,commercial,cleaning,false,roundup — covers multiple products
+"best cordless vacuum under 100",3200,58,commercial,cleaning,false,roundup; high-competition — Wirecutter and major tech publications dominate
+"best robot vacuum under 200",4500,65,commercial,cleaning,false,roundup; high-competition — extremely competitive; long-term target only
+"best vacuum for pet hair",6800,72,commercial,cleaning,false,roundup; high-competition — highest difficulty in cleaning category; avoid until site has strong authority
+"best dish brush",1900,30,commercial,cleaning,false,roundup — covers multiple products; low difficulty relative to volume
+"best toilet brush review",1100,25,commercial,cleaning,false,roundup — covers multiple products; low difficulty
+"best shower cleaner spray",1700,35,commercial,cleaning,false,roundup — covers multiple products
+"best mop for hardwood floors",2900,50,commercial,cleaning,false,roundup; high-competition — major home publications dominate
+"how often should you clean your washing machine",4100,32,informational,cleaning,false,low-conversion — informational; use as FAQ content only; no direct affiliate angle
+"best way to clean stainless steel",3800,40,informational,cleaning,false,low-conversion — informational; use as FAQ content within a cleaning review
+"how to deep clean a kitchen",6200,45,informational,cleaning,false,low-conversion — informational; use on cleaning category page; not a standalone review
