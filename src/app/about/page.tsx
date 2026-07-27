@@ -2,7 +2,12 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://clarkreviews.com'
+
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `${siteUrl}/about`,
+  },
   title: 'About Rachel Clark',
   description:
     "I'm Rachel Clark, and Clark Reviews is where I write about home, kitchen, and home-improvement products without the marketing fluff.",

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function HeroBio() {
   return (
-    <section className="flex flex-col items-center py-10 px-4">
+    <section className="flex flex-col items-center py-5 px-4">
       <Image
         src="/images/rachel-profile.webp"
         alt="Rachel Clark — Clark Reviews"

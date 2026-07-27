@@ -67,6 +67,10 @@ export async function generateMetadata(props: {
       description: frontmatter.excerpt,
       url: `${siteUrl}/reviews/${frontmatter.slug}`,
       type: 'article',
+      siteName: 'Clark Reviews',
+      publishedTime: frontmatter.date,
+      modifiedTime: frontmatter.updatedDate,
+      authors: ['https://clarkreviews.com/about'],
       images: [
         {
           url: frontmatter.ogImage,

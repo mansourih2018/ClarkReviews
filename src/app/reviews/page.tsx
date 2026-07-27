@@ -8,7 +8,12 @@ import { ReviewButton } from '@/components/shared/ReviewButton'
 import type { Category } from '@/types'
 import { CATEGORY_LABELS } from '@/lib/constants'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://clarkreviews.com'
+
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `${siteUrl}/reviews`,
+  },
   title: 'All Reviews',
   description:
     'Every product Rachel Clark has researched and reviewed without the marketing fluff.',
@@ -26,6 +31,8 @@ export const metadata: Metadata = {
       'Every product Rachel Clark has researched and reviewed without the marketing fluff.',
   },
 }
+
+export const revalidate = 3600
 
 export default async function ReviewsPage(props: {
   searchParams: Promise<{ category?: string }>

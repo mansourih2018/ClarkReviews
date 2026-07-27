@@ -215,10 +215,10 @@ Affiliate links use `nofollow noopener sponsored` — see Section 12 of GEMINI.m
 | Image | Size | Location | Used for |
 |---|---|---|---|
 | Product image | 600×600px square | `/public/images/products/[slug].webp` | Homepage cards only |
-| Featured / OG image | 1200×630px | `/public/images/og/[slug].webp` | Review page hero + Open Graph + Twitter Card |
+| Featured / OG image | 1200×630px | `/public/images/og/[slug].webp` | Review page hero + Open Graph + Twitter Card + Homepage Latest Reviews card banner |
 | Profile photo | 800×800px square | `/public/images/rachel-profile.webp` | HeroBio component |
 
-The **featured image doubles as the OG image** — one file, two uses.
+The **featured image doubles as the OG image** — one file, three uses.
 Rachel creates it using the Clark Reviews Canva template.
 AI-generated images are for lifestyle/context only — never to represent the actual product.
 
@@ -370,13 +370,13 @@ Do not hand-code the TOC.
 | Footer | Every page, always — links to `/affiliate-disclosure` |
 | `/affiliate-disclosure` | Standalone page with full statement |
 
-**Disclosure text:**
+**AffiliateDisclosure component text (review pages):**
 ```
-As an Amazon Associate and CJ Affiliate partner, I earn from qualifying
-purchases. This means I may receive a small commission if you click my
-links and buy something — at no extra cost to you. I only recommend
-products I've genuinely researched and believe in.
+As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.
 ```
+Followed by a "Full disclosure" link to `/affiliate-disclosure`.
+
+The standalone `/affiliate-disclosure` page retains its own full 3-paragraph legal statement — do not shorten that page.
 
 ---
 

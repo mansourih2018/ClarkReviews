@@ -41,7 +41,7 @@
 **Next.js 16 rules:**
 - No `middleware.ts` — use `proxy.ts` if request interception is needed
 - Use `revalidate` on review and category pages for ISR
-- Use `use cache` on data-fetching functions in `src/lib/`
+- Cache Components — `use cache` requires the experimental `cacheComponents` flag in `next.config.ts`, which also changes the default rendering model (enables Partial Prerendering). This flag is NOT currently enabled. Deferred as a deliberate decision — do not add `use cache` directives to any file until this flag is explicitly enabled as its own decision, not a side-effect of an unrelated task.
 
 ---
 
@@ -67,6 +67,7 @@ clarkreviews/
 │   ├── app/
 │   │   ├── layout.tsx               ← root layout, GA4, fonts
 │   │   ├── page.tsx                 ← homepage: HeroBio + cards + SEO content
+│   │   ├── not-found.tsx            ← custom 404 page
 │   │   ├── sitemap.ts               ← auto-generates sitemap.xml
 │   │   ├── robots.ts                ← generates robots.txt
 │   │   ├── reviews/
@@ -80,7 +81,7 @@ clarkreviews/
 │   │
 │   ├── components/
 │   │   ├── layout/
-│   │   │   ├── Header.tsx
+│   │   │   ├── Header.tsx           ← desktop nav + mobile hamburger menu (below md:)
 │   │   │   ├── Footer.tsx           ← always links to /affiliate-disclosure
 │   │   │   └── AffiliateDisclosure.tsx
 │   │   ├── home/
@@ -100,13 +101,16 @@ clarkreviews/
 │   │       ├── ReviewButton.tsx     ← "Read My Full Review" internal link
 │   │       ├── Breadcrumbs.tsx      ← nav + BreadcrumbList schema
 │   │       ├── AuthorByline.tsx     ← Rachel Clark + Person schema
-│   │       └── StarRating.tsx       ← visual stars from numeric score
+│   │       ├── StarRating.tsx       ← visual stars from numeric score
+│   │       ├── MdxImage.tsx         ← img override for MDX content, renders through Next.js Image
+│   │       └── MdxLink.tsx          ← a override for MDX content, internal (same-tab Link) vs external (new-tab, rel=noopener)
 │   │
 │   ├── lib/
 │   │   ├── products.ts              ← getProducts(), getFeaturedProducts()
 │   │   ├── reviews.ts               ← getAllReviews(), getReviewBySlug()
-│   │   ├── categories.ts            ← getCategories(), getProductsByCategory()
-│   │   └── schema.ts                ← all JSON-LD generators — never hand-write schema
+│   │   ├── categories.ts            ← getCategories()
+│   │   ├── schema.ts                ← all JSON-LD generators — never hand-write schema
+│   │   └── constants.ts             ← shared CATEGORY_LABELS — imported by all pages needing category display names
 │   │
 │   ├── types/
 │   │   └── index.ts                 ← shared TypeScript interfaces
@@ -126,7 +130,8 @@ clarkreviews/
 │       ├── og/[slug].webp           ← 1200×630px — review hero + social sharing
 │       └── products/[slug].webp     ← 600×600px square — homepage cards only
 │
-└── .env.local                       ← never commit to git
+├── .env.local                       ← never commit to git
+└── .env.example                     ← documents NEXT_PUBLIC_GA4_ID and NEXT_PUBLIC_SITE_URL
 ```
 
 ---
@@ -176,6 +181,30 @@ Secondary (Read My Full Review)
 This label shortening applies only in narrow card grids (e.g. `ProductCard`).
 Review page components (`QuickVerdict`, `Verdict`) always use the full button text.
 
+**Product Card anatomy (current):**
+```
+image (with rating badge overlay, top-right: bg-rating text-white font-bold rounded-full)
+  → category pill (bg-bg text-text-muted text-xs rounded-full)
+  → product name
+  → [Read My Full Review] secondary button
+  → [Check Price on Amazon] primary button
+```
+
+**Profile photo styling (HeroBio):**
+```
+ring-[3px] ring-accent ring-offset-2 ring-offset-bg
+```
+Applied to the circular `rachel-profile.webp` image in `HeroBio.tsx`.
+
+**Section Accent Bar:**
+```
+w-12 h-1 bg-accent rounded-full mb-3
+```
+Placed directly above each H2 that opens a new content section on the homepage
+(e.g. "Latest Reviews", "Browse by Category"). This is the standard section-marker
+pattern going forward — do not introduce a different pattern (like background color
+blocks) without updating this doc first.
+
 ---
 
 ## 5. Page Architecture
@@ -194,12 +223,13 @@ HeroBio
 ProductCard grid
   source: products.json where featured: true, sorted by featuredOrder
   columns: 2 mobile / 3 tablet / 4 desktop
-  card: image → product name → [Read My Full Review] → [Check Price on Amazon]
+  card: image (with rating badge overlay) → category pill → product name → [Read My Full Review] → [Check Price on Amazon]
 ```
 
 **Zone 2 — below the fold (SEO)**
 ```
-Latest Reviews   →  3 most recent MDX reviews
+Latest Reviews   →  3 most recent MDX reviews, each card:
+                     OG image banner (aspect-[1200/630]) → StarRating → product name → excerpt → "Read review →" link
 Browse by Category  →  category cards → /category/[slug]
 See all reviews  →  /reviews
 ```
@@ -733,13 +763,13 @@ CJ:      CJ-generated deep link (from CJ dashboard)
 | Footer | Every page, always — links to `/affiliate-disclosure` |
 | `/affiliate-disclosure` | Full statement — standalone page |
 
-**Disclosure text:**
+**AffiliateDisclosure component text (review pages):**
 ```
-As an Amazon Associate and CJ Affiliate partner, I earn from qualifying
-purchases. This means I may receive a small commission if you click my
-links and buy something — at no extra cost to you. I only recommend
-products I've genuinely researched and believe in.
+As an Amazon Associate, I earn from qualifying purchases at no extra cost to you.
 ```
+Followed by a "Full disclosure" link to `/affiliate-disclosure`.
+
+The standalone `/affiliate-disclosure` page retains its own full 3-paragraph legal statement — do not shorten that page.
 
 ---
 

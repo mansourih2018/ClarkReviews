@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://clarkreviews.com'
+
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `${siteUrl}/affiliate-disclosure`,
+  },
   title: 'Affiliate Disclosure',
   description:
     "How Clark Reviews earns money and why it doesn't affect our recommendations.",

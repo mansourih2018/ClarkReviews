@@ -13,3 +13,7 @@
   --color-rating:        #D4842A;   /* amber — stars */
   --font-sans: "Inter", system-ui, sans-serif;
 }
+
+html {
+  scroll-padding-top: 5rem;
+}

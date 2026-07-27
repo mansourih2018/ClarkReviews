@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { getCategories } from '@/lib/categories'
 import { getAllReviews } from '@/lib/reviews'
 import { StarRating } from '@/components/shared/StarRating'
@@ -30,6 +31,13 @@ export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await props.params
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://clarkreviews.com'
+  const categories = getCategories()
+
+  if (!categories.includes(slug as Category)) {
+    return { title: 'Category Not Found' }
+  }
+
   const category = slug as Category
   const label = CATEGORY_LABELS[category] || slug
   const title = `${label} Reviews`
@@ -40,6 +48,9 @@ export async function generateMetadata(props: {
   return {
     title,
     description,
+    alternates: {
+      canonical: `${siteUrl}/category/${slug}`,
+    },
     openGraph: {
       title: `${title} | Clark Reviews`,
       description,
@@ -58,6 +69,12 @@ export default async function CategoryPage(props: {
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await props.params
+  const categories = getCategories()
+
+  if (!categories.includes(slug as Category)) {
+    notFound()
+  }
+
   const category = slug as Category
   const label = CATEGORY_LABELS[category] || slug
   const description = CATEGORY_DESCRIPTIONS[category]

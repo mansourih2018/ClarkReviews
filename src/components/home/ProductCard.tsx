@@ -17,7 +17,7 @@ export function ProductCard({ product, priority = false, rating }: { product: Pr
           priority={priority}
         />
         {rating !== undefined && (
-          <span className="absolute top-2 right-2 bg-surface/90 backdrop-blur-sm text-rating font-bold text-sm rounded-full px-2 py-1">
+          <span className="absolute top-2 right-2 bg-rating text-white font-bold text-xs sm:text-sm rounded-full px-1.5 py-0.5 sm:px-2 sm:py-1">
             {rating.toFixed(1)}/10
           </span>
         )}
