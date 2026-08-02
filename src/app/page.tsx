@@ -84,7 +84,7 @@ export default async function HomePage() {
                       {review.excerpt}
                     </p>
                     <span className="inline-block mt-3 bg-accent text-white rounded-full px-4 py-2 text-sm font-semibold hover:bg-accent-hover transition-colors duration-200">
-                      Read review &rarr;
+                      Read Full Review
                     </span>
                   </div>
                 </Link>
@@ -121,7 +121,7 @@ export default async function HomePage() {
             href="/reviews"
             className="inline-block bg-accent text-white rounded-full px-6 py-3 text-base font-semibold hover:bg-accent-hover transition-colors duration-200"
           >
-            See all reviews &rarr;
+            See all reviews
           </Link>
         </div>
 

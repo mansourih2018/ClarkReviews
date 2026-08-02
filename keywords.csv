@@ -39,6 +39,8 @@ keyword,monthly_volume,difficulty,intent,category,used,notes
 "shoe storage cabinet",22200,41,commercial,storage,true,strong-commercial — single product review; Semrush-verified data (unlike most rows in this file, which are estimated); high volume opportunity, difficulty in line with previously successful picks like cosori/philips air fryer reviews
 "shoe cabinet entryway",8100,31,commercial,storage,false,long-tail variant of shoe storage cabinet — Semrush-verified, use in FAQ or secondary keywords
 "entryway shoe cabinet",6600,28,commercial,storage,false,long-tail variant of shoe storage cabinet — Semrush-verified, use in FAQ or secondary keywords
+"slim bathroom storage cabinet",1600,28,commercial,storage,true,strong-commercial — single product review; Semrush-verified
+"slim bathroom storage cabinet with drawers",210,25,commercial,storage,false,long-tail variant of slim bathroom storage cabinet — Semrush-verified, use in FAQ or secondary keywords
 "best drawer organizers for kitchen",2800,38,commercial,organization,false,roundup — covers multiple products
 "best pantry organizers",3400,52,commercial,organization,false,roundup; high-competition — major lifestyle publications dominate
 "best refrigerator organizer bins",1600,32,commercial,organization,false,roundup — covers multiple products
@@ -77,3 +79,7 @@ keyword,monthly_volume,difficulty,intent,category,used,notes
 "how often should you clean your washing machine",4100,32,informational,cleaning,false,low-conversion — informational; use as FAQ content only; no direct affiliate angle
 "best way to clean stainless steel",3800,40,informational,cleaning,false,low-conversion — informational; use as FAQ content within a cleaning review
 "how to deep clean a kitchen",6200,45,informational,cleaning,false,low-conversion — informational; use on cleaning category page; not a standalone review
+"blackout cellular shades",2400,22,commercial,home-improvement,true,strong-commercial — single product review; Semrush-verified
+"cordless cellular shades no drill",320,16,commercial,home-improvement,false,long-tail variant — matches "No Drill No Tools" product feature exactly; Semrush-verified
+"cellular blackout shades",720,24,commercial,home-improvement,false,word-order variant of primary keyword; Semrush-verified
+

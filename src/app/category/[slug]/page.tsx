@@ -18,6 +18,8 @@ const CATEGORY_DESCRIPTIONS: Record<Category, string> = {
     'A good cleaning product should perform as well as the manufacturer claims. These reviews compare stated cleaning power against verified buyer results for vacuums, mops, and cleaning tools.',
   'air-fryers':
     'Air fryer performance varies significantly by wattage, basket size, and cooking element design. These reviews analyze manufacturer specs against verified buyer cooking results, durability data, and ease-of-maintenance reports.',
+  'home-improvement':
+    "Home improvement products range widely in complexity and cost, from window treatments to hardware to fixtures. These reviews focus on installation difficulty, material durability, and verified buyer experience — separating features worth paying for from marketing claims that don't hold up in daily use.",
 }
 
 export const revalidate = 3600

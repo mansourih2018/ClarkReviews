@@ -13,7 +13,7 @@ const mdxComponents = {
   a: MdxLink,
 }
 
-const VALID_CATEGORIES = new Set(['storage', 'organization', 'cleaning', 'air-fryers'])
+const VALID_CATEGORIES = new Set(['storage', 'organization', 'cleaning', 'air-fryers', 'home-improvement'])
 const VALID_VERDICTS = new Set(['Buy', 'Skip', 'Wait for Sale'])
 const RATING_KEYS = ['valueForMoney', 'buildQuality', 'performance', 'easeOfUse', 'design', 'overall']
 

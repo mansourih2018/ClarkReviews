@@ -5,4 +5,5 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   organization: 'Organization',
   cleaning: 'Cleaning',
   'air-fryers': 'Air Fryers',
+  'home-improvement': 'Home Improvement',
 }

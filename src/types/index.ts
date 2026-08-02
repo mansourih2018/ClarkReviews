@@ -1,4 +1,5 @@
-export type Category = 'storage' | 'organization' | 'cleaning' | 'air-fryers'
+export type Category = 'storage' | 'organization' | 'cleaning' | 'air-fryers' | 'home-improvement'
+
 
 export interface Product {
   id: string

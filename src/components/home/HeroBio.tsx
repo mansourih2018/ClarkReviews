@@ -29,7 +29,7 @@ export function HeroBio() {
           href="/affiliate-disclosure"
           className="text-accent hover:text-accent-hover transition-colors duration-200"
         >
-          Amazon Associates and CJ Affiliate
+          Amazon Associates
         </Link>
         .
       </p>

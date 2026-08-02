@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: 'Organization', href: '/category/organization' },
   { label: 'Cleaning', href: '/category/cleaning' },
   { label: 'Air Fryers', href: '/category/air-fryers' },
+  { label: 'Home Improvement', href: '/category/home-improvement' },
 ]
 
 export function Header() {

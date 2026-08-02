@@ -19,7 +19,7 @@
 | **Methodology** | Research-based — specs, verified buyer data, public test data. No hands-on testing claims. |
 | **No prices** | Never display prices, stock status, or retailer star ratings anywhere. |
 
-**Categories:** `storage` · `organization` · `cleaning` · `air-fryers`
+**Categories:** `storage` · `organization` · `cleaning` · `air-fryers` · `home-improvement`
 
 ---
 
@@ -293,7 +293,7 @@ See all reviews  →  /reviews
       "id": "string",
       "name": "string",
       "slug": "string",
-      "category": "storage | organization | cleaning | air-fryers",
+      "category": "storage | organization | cleaning | air-fryers | home-improvement",
       "image": "/images/products/[slug].webp",
       "amazonUrl": "PASTE-SITESTRIPE-LINK-HERE",
       "cjUrl": "string | empty string",
@@ -423,7 +423,7 @@ export interface ReviewFrontmatter {
   featured: boolean
 }
 
-export type Category = 'storage' | 'organization' | 'cleaning' | 'air-fryers'
+export type Category = 'storage' | 'organization' | 'cleaning' | 'air-fryers' | 'home-improvement'
 ```
 
 **Rules:**

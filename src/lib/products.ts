@@ -6,6 +6,7 @@ const VALID_CATEGORIES: ReadonlySet<string> = new Set<Category>([
   'organization',
   'cleaning',
   'air-fryers',
+  'home-improvement',
 ])
 
 /**

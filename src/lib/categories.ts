@@ -5,6 +5,7 @@ const CATEGORIES: Category[] = [
   'organization',
   'cleaning',
   'air-fryers',
+  'home-improvement',
 ]
 
 export function getCategories(): Category[] {

@@ -9,7 +9,7 @@
       "amazonUrl": "https://amzn.to/4wtBGsX",
       "cjUrl": "",
       "featured": true,
-      "featuredOrder": 1
+      "featuredOrder": 3
     },
     {
       "id": "o-cedar-mop-review",
@@ -20,7 +20,7 @@
       "amazonUrl": "https://amzn.to/4bCCX91",
       "cjUrl": "",
       "featured": true,
-      "featuredOrder": 2
+      "featuredOrder": 6
     },
     {
       "id": "shark-vacmop-review",
@@ -31,7 +31,7 @@
       "amazonUrl": "https://amzn.to/4hdmgVh",
       "cjUrl": "",
       "featured": true,
-      "featuredOrder": 3
+      "featuredOrder": 5
     },
     {
       "id": "shoe-storage-cabinet",
@@ -40,6 +40,28 @@
       "category": "storage",
       "image": "/images/products/shoe-storage-cabinet.webp",
       "amazonUrl": "https://amzn.to/4yuPGVi",
+      "cjUrl": "",
+      "featured": true,
+      "featuredOrder": 2
+    },
+    {
+      "id": "blackout-cellular-shades",
+      "name": "Sulugood No-Drill Blackout Cellular Shades",
+      "slug": "blackout-cellular-shades",
+      "category": "home-improvement",
+      "image": "/images/products/blackout-cellular-shades.webp",
+      "amazonUrl": "https://amzn.to/4wCdULU",
+      "cjUrl": "",
+      "featured": true,
+      "featuredOrder": 1
+    },
+    {
+      "id": "slim-bathroom-storage-cabinet",
+      "name": "Spirich Slim Bathroom Storage Cabinet",
+      "slug": "slim-bathroom-storage-cabinet",
+      "category": "storage",
+      "image": "/images/products/slim-bathroom-storage-cabinet.webp",
+      "amazonUrl": "https://amzn.to/45zyoJ9",
       "cjUrl": "",
       "featured": true,
       "featuredOrder": 4
