@@ -36,7 +36,7 @@
 | Analytics | Google Analytics 4 via `@next/third-parties` |
 | Package manager | npm — never pnpm or yarn |
 | Node.js | **v24.16.0** |
-| Deployment | Hostinger Business — Managed Node.js — `output: 'standalone'` |
+| Deployment | Hostinger Business — Managed Node.js (standard `npm install` + `next start`) |
 
 **Next.js 16 rules:**
 - No `middleware.ts` — use `proxy.ts` if request interception is needed
@@ -780,7 +780,6 @@ The standalone `/affiliate-disclosure` page retains its own full 3-paragraph leg
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
   images: {
     formats: ['image/webp'],
   },
@@ -788,6 +787,13 @@ const nextConfig: NextConfig = {
 
 export default nextConfig
 ```
+
+> **Why no `output: 'standalone'`?** Hostinger's Managed Node.js hosting runs a
+> standard `npm install` + `next start` workflow — it does not use the standalone
+> `server.js` bundle. `next start` does not work correctly with `output: 'standalone'`:
+> external/dynamic module resolution at runtime fails, which specifically broke the
+> `/reviews` route in production (the only fully dynamic page requiring fresh MDX
+> compilation on every request). Do not re-add standalone output.
 
 **Hostinger settings:**
 ```
@@ -803,7 +809,7 @@ NEXT_PUBLIC_SITE_URL=https://clarkreviews.com
 ```
 
 **Pre-deploy checklist:**
-- [ ] `output: 'standalone'` in `next.config.ts`
+- [ ] No `output: 'standalone'` in `next.config.ts` — see note above
 - [ ] All env vars set in Hostinger dashboard
 - [ ] `npm run build` passes with zero errors
 - [ ] No `middleware.ts` — use `proxy.ts` if needed
