@@ -808,7 +808,13 @@ Node.js version: 24.16.0
 ```
 NEXT_PUBLIC_GA4_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_SITE_URL=https://clarkreviews.com
+NEXT_TELEMETRY_DISABLED=1
 ```
+
+> `NEXT_TELEMETRY_DISABLED=1` disables Next.js's internal telemetry, which was the
+> source of a background "process.stdin EEXIST" error in Hostinger's non-interactive
+> process environment (confirmed via runtime log monitoring post-deployment — no
+> application code or `next-mdx-remote` dependency was responsible).
 
 **Pre-deploy checklist:**
 - [ ] No `output: 'standalone'` in `next.config.ts` — see note above
