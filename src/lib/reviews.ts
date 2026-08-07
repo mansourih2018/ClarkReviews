@@ -1,5 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
+import matter from 'gray-matter'
 import type { ReviewFrontmatter } from '@/types'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import type { ReactElement } from 'react'
@@ -16,6 +17,22 @@ const mdxComponents = {
 const VALID_CATEGORIES = new Set(['storage', 'organization', 'cleaning', 'air-fryers', 'home-improvement'])
 const VALID_VERDICTS = new Set(['Buy', 'Skip', 'Wait for Sale'])
 const RATING_KEYS = ['valueForMoney', 'buildQuality', 'performance', 'easeOfUse', 'design', 'overall']
+
+/**
+ * Normalizes gray-matter parsed data so date fields are YYYY-MM-DD strings.
+ * gray-matter's default js-yaml engine parses bare YAML dates (e.g. 2026-07-31)
+ * as JavaScript Date objects. validateReviewFrontmatter expects strings, matching
+ * the shape that compileMDX (via vfile-matter) produces.
+ */
+function normalizeFrontmatterDates(data: Record<string, unknown>): Record<string, unknown> {
+  const dateKeys = ['date', 'updatedDate']
+  for (const key of dateKeys) {
+    if (data[key] instanceof Date) {
+      data[key] = (data[key] as Date).toISOString().split('T')[0]
+    }
+  }
+  return data
+}
 
 /**
  * Validates review frontmatter at runtime, matching the ReviewFrontmatter interface.
@@ -149,13 +166,10 @@ export async function getAllReviews(): Promise<ReviewFrontmatter[]> {
         const filePath = path.join(REVIEWS_DIR, file)
         const source = await fs.readFile(filePath, 'utf-8')
 
-        const { frontmatter } = await compileMDX<ReviewFrontmatter>({
-          source,
-          components: mdxComponents,
-          options: { parseFrontmatter: true },
-        })
+        const { data } = matter(source)
+        const normalized = normalizeFrontmatterDates(data)
 
-        return validateReviewFrontmatter(frontmatter, file)
+        return validateReviewFrontmatter(normalized, file)
       } catch (error) {
         console.warn(
           `[reviews] Failed to parse ${file} — skipping. Error: ${error instanceof Error ? error.message : String(error)}`
