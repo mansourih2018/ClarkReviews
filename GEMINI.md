@@ -27,9 +27,9 @@
 
 | Tool | Choice |
 |---|---|
-| Framework | Next.js 16.2.x — App Router only |
+| Framework | Next.js 16.3.x — App Router only |
 | Language | **TypeScript** — all files `.ts` / `.tsx` |
-| Bundler | Turbopack (dev) · Webpack (production — `next build --webpack`) |
+| Bundler | Turbopack (`next dev` & `next build`) |
 | Styling | Tailwind CSS v4 — CSS-first config via `@theme` |
 | Content | MDX via `next-mdx-remote` |
 | Data | JSON files — `/data/products.json` |
@@ -42,8 +42,7 @@
 - No `middleware.ts` — use `proxy.ts` if request interception is needed
 - Use `revalidate` on review and category pages for ISR
 - Cache Components — `use cache` requires the experimental `cacheComponents` flag in `next.config.ts`, which also changes the default rendering model (enables Partial Prerendering). This flag is NOT currently enabled. Deferred as a deliberate decision — do not add `use cache` directives to any file until this flag is explicitly enabled as its own decision, not a side-effect of an unrelated task.
-
-**Production builds use `--webpack`:** Turbopack has a confirmed bug ([vercel/next.js#87737](https://github.com/vercel/next.js/issues/87737)) where it generates content-hashed references to external packages like `next-mdx-remote` based on build-time `node_modules` structure. When the runtime environment's `node_modules` layout differs (as on Hostinger, where build and run steps are separate), this produces "Failed to load external module...EEXIST" errors. Production builds therefore use `next build --webpack`. Turbopack remains default for local dev (`next dev`) where it has caused zero issues.
+- Production build uses standard `"build": "next build"` (Turbopack is default in Next.js 16; do not pass `--webpack` flag as Hostinger's environment rejects it).
 
 ---
 
