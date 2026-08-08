@@ -1,7 +1,17 @@
 import fs from 'fs/promises'
 import path from 'path'
 import matter from 'gray-matter'
+import jsyaml from 'js-yaml'
 import type { ReviewFrontmatter } from '@/types'
+
+const matterEngineOptions = {
+  engines: {
+    yaml: {
+      parse: (str: string) => jsyaml.load(str) as object,
+      stringify: (obj: object) => jsyaml.dump(obj),
+    },
+  },
+}
 import { compileMDX } from 'next-mdx-remote/rsc'
 import type { ReactElement } from 'react'
 import { MdxImage } from '@/components/shared/MdxImage'
@@ -166,7 +176,7 @@ export async function getAllReviews(): Promise<ReviewFrontmatter[]> {
         const filePath = path.join(REVIEWS_DIR, file)
         const source = await fs.readFile(filePath, 'utf-8')
 
-        const { data } = matter(source)
+        const { data } = matter(source, matterEngineOptions)
         const normalized = normalizeFrontmatterDates(data)
 
         return validateReviewFrontmatter(normalized, file)
